@@ -24,19 +24,18 @@ class InComingsController < ApplicationController
   # POST /in_comings
   # POST /in_comings.json
   def create
-    @in_coming = InComing.new(in_coming_params)
-
-    respond_to do |format|
-      if @in_coming.save
-        format.html { redirect_to @in_coming, notice: 'In coming was successfully created.' }
-        format.json { render :show, status: :created, location: @in_coming }
-      else
-        format.html { render :new }
-        format.json { render json: @in_coming.errors, status: :unprocessable_entity }
-      end
+   # @in_coming = InComing.new(in_coming_params)
+ 
+     # reeftank = ReefTank.where(:reef_tank_arduino_id => params[:t_n]).first
+      InComing.create!(:params => params, :update_reason => params[:up_rea], :house_unit_id => params[:h_id], :ambient_temp => params[:a_t], :temp => params[:t], :ct1_realPower => params[:ct1_rp], :ct2_realPower => params[:ct2_rp], :ct3_realPower => params[:ct3_rp], :ct4_realPower => params[:ct4_rp], :ct1_Vrms => params[:ct1_v], :time_stamp => params[:time]
+      )
+     render :nothing => true
     end
-  end
 
+ # :update_reason => params[: ], :house_unit_id => params[:h_id], :ambient_temp => params[:a_t], :temp => params[:t], :ct1_realPower => params[:ct1_rp], :ct2_realPower => params[:ct2_rp], :ct3_realPower => params[:ct3_rp], :ct4_realPower => params[:ct4_rp], :ct1_Vrms => params[:ct1_v], :time_stamp => params[:time] 
+  
+    # curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d ' {"up_rea":"22","t":"86.7","h_id":"1","a_t":"84.8","ct1_rp":"103","ct1_v":"120","ct2_rp":"104","ct3_rp":"105","ct4_rp":"106","time":"12:20:00"}' http://localhost:3000/in_comings
+ 
   # PATCH/PUT /in_comings/1
   # PATCH/PUT /in_comings/1.json
   def update
