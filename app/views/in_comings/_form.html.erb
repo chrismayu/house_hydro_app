@@ -1,0 +1,30 @@
+<%= simple_form_for @in_coming, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :house_id %>
+  <%= error_span(@in_coming[:house_id]) %>
+  <%= f.input :params %>
+  <%= error_span(@in_coming[:params]) %>
+  <%= f.input :update_reason %>
+  <%= error_span(@in_coming[:update_reason]) %>
+  <%= f.input :house_unit_id %>
+  <%= error_span(@in_coming[:house_unit_id]) %>
+  <%= f.input :ambient_temp %>
+  <%= error_span(@in_coming[:ambient_temp]) %>
+  <%= f.input :temp %>
+  <%= error_span(@in_coming[:temp]) %>
+  <%= f.input :ct1_realPower %>
+  <%= error_span(@in_coming[:ct1_realPower]) %>
+  <%= f.input :ct2_realPower %>
+  <%= error_span(@in_coming[:ct2_realPower]) %>
+  <%= f.input :ct3_realPower %>
+  <%= error_span(@in_coming[:ct3_realPower]) %>
+  <%= f.input :ct4_realPower %>
+  <%= error_span(@in_coming[:ct4_realPower]) %>
+  <%= f.input :ct1_Vrms %>
+  <%= error_span(@in_coming[:ct1_Vrms]) %>
+  <%= f.input :time_stamp %>
+  <%= error_span(@in_coming[:time_stamp]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                in_comings_path, :class => 'btn btn-default' %>
+<% end %>

@@ -12,11 +12,25 @@ group :development, :test do
   gem 'spring'
 end
 gem 'bootstrap-sass'
+gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem 'figaro', '>= 1.0.0.rc1'
 gem 'pundit'
 gem 'simple_form'
 gem 'thin'
+gem "heroku"
+gem "font-awesome-rails" 
+gem 'will_paginate', '~> 3.0.5'
+gem 'bootstrap-will_paginate' 
+gem 'stathat'
+gem 'local_time'
+gem 'bh', '~> 1.2'
+gem 'le'
+gem 'rollbar', '~> 1.4.4'
+
+gem "letter_opener", :group => :development
+
+
 group :development do
   gem 'better_errors'
   gem 'guard-bundler'

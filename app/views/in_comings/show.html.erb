@@ -1,0 +1,41 @@
+<%- model_class = InComing -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:house_id) %>:</strong></dt>
+  <dd><%= @in_coming.house_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:params) %>:</strong></dt>
+  <dd><%= @in_coming.params %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:update_reason) %>:</strong></dt>
+  <dd><%= @in_coming.update_reason %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:house_unit_id) %>:</strong></dt>
+  <dd><%= @in_coming.house_unit_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:ambient_temp) %>:</strong></dt>
+  <dd><%= @in_coming.ambient_temp %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:temp) %>:</strong></dt>
+  <dd><%= @in_coming.temp %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:ct1_realPower) %>:</strong></dt>
+  <dd><%= @in_coming.ct1_realPower %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:ct2_realPower) %>:</strong></dt>
+  <dd><%= @in_coming.ct2_realPower %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:ct3_realPower) %>:</strong></dt>
+  <dd><%= @in_coming.ct3_realPower %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:ct4_realPower) %>:</strong></dt>
+  <dd><%= @in_coming.ct4_realPower %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:ct1_Vrms) %>:</strong></dt>
+  <dd><%= @in_coming.ct1_Vrms %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:time_stamp) %>:</strong></dt>
+  <dd><%= @in_coming.time_stamp %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              in_comings_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_in_coming_path(@in_coming), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              in_coming_path(@in_coming),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
