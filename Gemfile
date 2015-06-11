@@ -26,7 +26,7 @@ gem 'stathat'
 gem 'local_time'
 gem 'bh', '~> 1.2'
 gem 'le'
-gem 'rollbar', '~> 1.4.4'
+gem 'rollbar', '~> 1.5.3'
 
 gem "letter_opener", :group => :development
 
