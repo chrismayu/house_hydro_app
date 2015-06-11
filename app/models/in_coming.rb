@@ -3,7 +3,7 @@ class InComing < ActiveRecord::Base
   default_scope { order('in_comings.created_at DESC') } 
  
   serialize :params
-  
+   
  
  after_create :update_stat
  
