@@ -36,6 +36,12 @@ class InComingsController < ApplicationController
   
     # curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d ' {"up_rea":"22","t":"86.7","h_id":"1","a_t":"84.8","ct1_rp":"103","ct1_v":"120","ct2_rp":"104","ct3_rp":"105","ct4_rp":"106","time":"12:20:00"}' http://localhost:3000/in_comings
  
+ # curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d ' {"up_rea":"22","t":"86.7","h_id":"1","a_t":"84.8","ct1_rp":"103","ct1_v":"120","ct2_rp":"104","ct3_rp":"105","ct4_rp":"106","time":"12:20:00"}' https://hydro-monitor.herokuapp.com/in_comings
+ 
+ 
+ 
+ 
+ 
   # PATCH/PUT /in_comings/1
   # PATCH/PUT /in_comings/1.json
   def update
